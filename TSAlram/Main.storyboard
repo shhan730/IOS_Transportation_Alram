@@ -117,7 +117,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Ih-4U-L6k"/>
                     </view>
-                    <navigationItem key="navigationItem" title="출퇴근 교통 알람" id="F4O-WE-4w6"/>
+                    <navigationItem key="navigationItem" title="출퇴근 교통 알람" id="F4O-WE-4w6">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="EXr-sc-y4i"/>
+                            <barButtonItem title="About" id="djm-JQ-TEy"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ts-fj-owa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
