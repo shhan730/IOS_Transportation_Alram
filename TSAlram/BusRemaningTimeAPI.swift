@@ -24,6 +24,7 @@ class BusRemaningTimeAPI: NSObject, XMLParserDelegate {
         let url =
         "http://ws.bus.go.kr/api/rest/arrive/getArrInfoByRoute?ServiceKey=\(key)&stId=\(stId)&busRouteId=\(routeId)&ord=\(ord)"
         
+        
         guard let xmlParser = XMLParser(contentsOf: URL(string: url)!) else { return [String:String]() }
         
         xmlParser.delegate = self;
@@ -41,7 +42,7 @@ class BusRemaningTimeAPI: NSObject, XMLParserDelegate {
             firstBusRemainingTime = ""
             secondBusRemainingTime = ""
         }
-        
+        //print("1")
     }
     
     // 현재 테그에 담겨있는 문자열 전달
@@ -52,7 +53,7 @@ class BusRemaningTimeAPI: NSObject, XMLParserDelegate {
         }else if currentElement == "exps2"{
             secondBusRemainingTime = string
         }
-        
+        //print("2")
     }
     
     // XML 파서가 종료 테그를 만나면 호출됨
@@ -63,7 +64,7 @@ class BusRemaningTimeAPI: NSObject, XMLParserDelegate {
         }else if currentElement == "exps2"{
             busTimeInfo["secondBusRemainingTime"] = secondBusRemainingTime
         }
-        
+        //print("3")
     }
     
 }

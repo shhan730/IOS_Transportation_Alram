@@ -13,6 +13,13 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        //stId=112000001&busRouteId=100100118&ord=23
+        
+        let busRemainingTimeAPI = BusRemaningTimeAPI()
+        
+        let busTimeInfo = busRemainingTimeAPI.requestBusInfo(busStId: "112000001", busRouteId: "100100118", busOrd: "23")
+        
+        print(busTimeInfo)
     }
     
 
